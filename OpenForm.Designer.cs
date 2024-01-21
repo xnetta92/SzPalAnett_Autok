@@ -43,7 +43,7 @@
             // 
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(856, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(507, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -53,7 +53,7 @@
             this.carsToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(856, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(507, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -70,20 +70,23 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // listBox_Cars
             // 
@@ -91,16 +94,16 @@
             this.listBox_Cars.FormattingEnabled = true;
             this.listBox_Cars.Location = new System.Drawing.Point(0, 48);
             this.listBox_Cars.Name = "listBox_Cars";
-            this.listBox_Cars.Size = new System.Drawing.Size(236, 385);
+            this.listBox_Cars.Size = new System.Drawing.Size(236, 335);
             this.listBox_Cars.TabIndex = 2;
             this.listBox_Cars.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // panel_Make
             // 
             this.panel_Make.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Make.Location = new System.Drawing.Point(571, 48);
+            this.panel_Make.Location = new System.Drawing.Point(233, 48);
             this.panel_Make.Name = "panel_Make";
-            this.panel_Make.Size = new System.Drawing.Size(285, 385);
+            this.panel_Make.Size = new System.Drawing.Size(274, 335);
             this.panel_Make.TabIndex = 3;
             this.panel_Make.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Make_Paint);
             // 
@@ -108,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 433);
+            this.ClientSize = new System.Drawing.Size(507, 383);
             this.Controls.Add(this.panel_Make);
             this.Controls.Add(this.listBox_Cars);
             this.Controls.Add(this.menuStrip1);
@@ -132,8 +135,8 @@
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ListBox listBox_Cars;
         private System.Windows.Forms.Panel panel_Make;
+        public System.Windows.Forms.ListBox listBox_Cars;
     }
 }
 

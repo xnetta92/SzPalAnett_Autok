@@ -86,6 +86,34 @@ namespace SzPalAnett_Autok
             return cars;
         }
 
+        internal void updateCars(Cars cars)
+        {
+            sql.CommandText = "UPDATE `auto` SET " +
+                "`marka`=@marka," +
+                "`modell`=@modell," +
+                "`gyartasiev`=@gyartasiev," +
+                "`forgalmiErvenyesseg`=@forgalmiErvenyesseg," +
+                "`vetelar`=@vetelar," +
+                "`kmallas`=@kmallas," +
+                "`hengerűrtartalom`=@hengerűrtartalom," +
+                "`tomeg`=@tomeg," +
+                "`teljesitmeny`=@teljesitmeny " +
+                "WHERE `rendszam`=@rendszam";
+            sql.Parameters.Clear();
+            sql.Parameters.AddWithValue("@marka", cars.Make);
+            try
+            {
+                connectionOpen();
+                sql.ExecuteNonQuery();
 
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { connectionClose(); }
+
+
+        }
     }
 }

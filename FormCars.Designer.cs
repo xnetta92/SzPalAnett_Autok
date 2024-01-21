@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_licplate = new System.Windows.Forms.Label();
             this.textBox_licplate = new System.Windows.Forms.TextBox();
             this.pictureBox_makelogo = new System.Windows.Forms.PictureBox();
             this.label_make = new System.Windows.Forms.Label();
             this.textBox_make = new System.Windows.Forms.TextBox();
             this.label_model = new System.Windows.Forms.Label();
             this.textBox_model = new System.Windows.Forms.TextBox();
-            this.label_ManufDate = new System.Windows.Forms.Label();
-            this.numericUpDown_manufDate = new System.Windows.Forms.NumericUpDown();
+            this.label_ManDate = new System.Windows.Forms.Label();
+            this.numericUpDown_manDate = new System.Windows.Forms.NumericUpDown();
             this.label_validity = new System.Windows.Forms.Label();
             this.dateTimePicker_validity = new System.Windows.Forms.DateTimePicker();
             this.label_price = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.label_masssymb = new System.Windows.Forms.Label();
             this.button_action = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_makelogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_manufDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_manDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_price)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_km)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CC)).BeginInit();
@@ -64,21 +64,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Hp)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // label_licplate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(42, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "LicPlate";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label_licplate.AutoSize = true;
+            this.label_licplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_licplate.Location = new System.Drawing.Point(42, 22);
+            this.label_licplate.Name = "label_licplate";
+            this.label_licplate.Size = new System.Drawing.Size(55, 16);
+            this.label_licplate.TabIndex = 0;
+            this.label_licplate.Text = "LicPlate";
+            this.label_licplate.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox_licplate
             // 
             this.textBox_licplate.Location = new System.Drawing.Point(12, 41);
             this.textBox_licplate.Name = "textBox_licplate";
+            this.textBox_licplate.ReadOnly = true;
             this.textBox_licplate.Size = new System.Drawing.Size(132, 20);
             this.textBox_licplate.TabIndex = 1;
             this.textBox_licplate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -126,22 +127,22 @@
             this.textBox_model.Size = new System.Drawing.Size(121, 20);
             this.textBox_model.TabIndex = 6;
             // 
-            // label_ManufDate
+            // label_ManDate
             // 
-            this.label_ManufDate.AutoSize = true;
-            this.label_ManufDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_ManufDate.Location = new System.Drawing.Point(193, 107);
-            this.label_ManufDate.Name = "label_ManufDate";
-            this.label_ManufDate.Size = new System.Drawing.Size(62, 16);
-            this.label_ManufDate.TabIndex = 7;
-            this.label_ManufDate.Text = "ManDate";
+            this.label_ManDate.AutoSize = true;
+            this.label_ManDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_ManDate.Location = new System.Drawing.Point(193, 107);
+            this.label_ManDate.Name = "label_ManDate";
+            this.label_ManDate.Size = new System.Drawing.Size(62, 16);
+            this.label_ManDate.TabIndex = 7;
+            this.label_ManDate.Text = "ManDate";
             // 
-            // numericUpDown_manufDate
+            // numericUpDown_manDate
             // 
-            this.numericUpDown_manufDate.Location = new System.Drawing.Point(196, 130);
-            this.numericUpDown_manufDate.Name = "numericUpDown_manufDate";
-            this.numericUpDown_manufDate.Size = new System.Drawing.Size(114, 20);
-            this.numericUpDown_manufDate.TabIndex = 8;
+            this.numericUpDown_manDate.Location = new System.Drawing.Point(196, 130);
+            this.numericUpDown_manDate.Name = "numericUpDown_manDate";
+            this.numericUpDown_manDate.Size = new System.Drawing.Size(114, 20);
+            this.numericUpDown_manDate.TabIndex = 8;
             // 
             // label_validity
             // 
@@ -325,19 +326,20 @@
             this.Controls.Add(this.label_price);
             this.Controls.Add(this.dateTimePicker_validity);
             this.Controls.Add(this.label_validity);
-            this.Controls.Add(this.numericUpDown_manufDate);
-            this.Controls.Add(this.label_ManufDate);
+            this.Controls.Add(this.numericUpDown_manDate);
+            this.Controls.Add(this.label_ManDate);
             this.Controls.Add(this.textBox_model);
             this.Controls.Add(this.label_model);
             this.Controls.Add(this.textBox_make);
             this.Controls.Add(this.label_make);
             this.Controls.Add(this.pictureBox_makelogo);
             this.Controls.Add(this.textBox_licplate);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_licplate);
             this.Name = "FormCars";
             this.Text = "FormCars";
+            this.Load += new System.EventHandler(this.FormCars_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_makelogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_manufDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_manDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_price)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_km)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CC)).EndInit();
@@ -350,15 +352,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_licplate;
         private System.Windows.Forms.TextBox textBox_licplate;
         private System.Windows.Forms.PictureBox pictureBox_makelogo;
         private System.Windows.Forms.Label label_make;
         private System.Windows.Forms.TextBox textBox_make;
         private System.Windows.Forms.Label label_model;
         private System.Windows.Forms.TextBox textBox_model;
-        private System.Windows.Forms.Label label_ManufDate;
-        private System.Windows.Forms.NumericUpDown numericUpDown_manufDate;
+        private System.Windows.Forms.Label label_ManDate;
+        private System.Windows.Forms.NumericUpDown numericUpDown_manDate;
         private System.Windows.Forms.Label label_validity;
         private System.Windows.Forms.DateTimePicker dateTimePicker_validity;
         private System.Windows.Forms.Label label_price;

@@ -10,12 +10,14 @@ namespace SzPalAnett_Autok
     {
         public static List<Cars> cars = new List<Cars>();
         public static DataBase db = null;
+        public static OpenForm openForm = null;
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             db = new DataBase();
             cars = db.getAllCars();
+            openForm = new OpenForm();
             Application.Run(new OpenForm());
         }
     }
