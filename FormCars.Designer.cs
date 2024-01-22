@@ -38,7 +38,6 @@
             this.label_ManDate = new System.Windows.Forms.Label();
             this.numericUpDown_manDate = new System.Windows.Forms.NumericUpDown();
             this.label_validity = new System.Windows.Forms.Label();
-            this.dateTimePicker_validity = new System.Windows.Forms.DateTimePicker();
             this.label_price = new System.Windows.Forms.Label();
             this.numericUpDown_price = new System.Windows.Forms.NumericUpDown();
             this.label_pricesymb = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@
             this.label_hpsymb = new System.Windows.Forms.Label();
             this.label_masssymb = new System.Windows.Forms.Label();
             this.button_action = new System.Windows.Forms.Button();
+            this.maskedTextBox_validity = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_makelogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_manDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_price)).BeginInit();
@@ -79,7 +79,6 @@
             // 
             this.textBox_licplate.Location = new System.Drawing.Point(12, 41);
             this.textBox_licplate.Name = "textBox_licplate";
-            this.textBox_licplate.ReadOnly = true;
             this.textBox_licplate.Size = new System.Drawing.Size(132, 20);
             this.textBox_licplate.TabIndex = 1;
             this.textBox_licplate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -89,6 +88,7 @@
             this.pictureBox_makelogo.Location = new System.Drawing.Point(12, 76);
             this.pictureBox_makelogo.Name = "pictureBox_makelogo";
             this.pictureBox_makelogo.Size = new System.Drawing.Size(132, 126);
+            this.pictureBox_makelogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox_makelogo.TabIndex = 2;
             this.pictureBox_makelogo.TabStop = false;
             this.pictureBox_makelogo.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -140,6 +140,11 @@
             // numericUpDown_manDate
             // 
             this.numericUpDown_manDate.Location = new System.Drawing.Point(196, 130);
+            this.numericUpDown_manDate.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown_manDate.Name = "numericUpDown_manDate";
             this.numericUpDown_manDate.Size = new System.Drawing.Size(114, 20);
             this.numericUpDown_manDate.TabIndex = 8;
@@ -153,14 +158,6 @@
             this.label_validity.Size = new System.Drawing.Size(51, 16);
             this.label_validity.TabIndex = 9;
             this.label_validity.Text = "Validity";
-            // 
-            // dateTimePicker_validity
-            // 
-            this.dateTimePicker_validity.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePicker_validity.Location = new System.Drawing.Point(397, 130);
-            this.dateTimePicker_validity.Name = "dateTimePicker_validity";
-            this.dateTimePicker_validity.Size = new System.Drawing.Size(121, 20);
-            this.dateTimePicker_validity.TabIndex = 10;
             // 
             // label_price
             // 
@@ -176,6 +173,11 @@
             // numericUpDown_price
             // 
             this.numericUpDown_price.Location = new System.Drawing.Point(196, 195);
+            this.numericUpDown_price.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown_price.Name = "numericUpDown_price";
             this.numericUpDown_price.Size = new System.Drawing.Size(114, 20);
             this.numericUpDown_price.TabIndex = 12;
@@ -203,6 +205,11 @@
             // numericUpDown_km
             // 
             this.numericUpDown_km.Location = new System.Drawing.Point(196, 253);
+            this.numericUpDown_km.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown_km.Name = "numericUpDown_km";
             this.numericUpDown_km.Size = new System.Drawing.Size(114, 20);
             this.numericUpDown_km.TabIndex = 15;
@@ -220,6 +227,11 @@
             // numericUpDown_CC
             // 
             this.numericUpDown_CC.Location = new System.Drawing.Point(397, 253);
+            this.numericUpDown_CC.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown_CC.Name = "numericUpDown_CC";
             this.numericUpDown_CC.Size = new System.Drawing.Size(114, 20);
             this.numericUpDown_CC.TabIndex = 17;
@@ -246,6 +258,11 @@
             // numericUpDown_mass
             // 
             this.numericUpDown_mass.Location = new System.Drawing.Point(196, 311);
+            this.numericUpDown_mass.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown_mass.Name = "numericUpDown_mass";
             this.numericUpDown_mass.Size = new System.Drawing.Size(114, 20);
             this.numericUpDown_mass.TabIndex = 20;
@@ -271,7 +288,12 @@
             // 
             // numericUpDown_Hp
             // 
-            this.numericUpDown_Hp.Location = new System.Drawing.Point(397, 311);
+            this.numericUpDown_Hp.Location = new System.Drawing.Point(397, 313);
+            this.numericUpDown_Hp.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown_Hp.Name = "numericUpDown_Hp";
             this.numericUpDown_Hp.Size = new System.Drawing.Size(114, 20);
             this.numericUpDown_Hp.TabIndex = 23;
@@ -303,11 +325,19 @@
             this.button_action.Text = "button1";
             this.button_action.UseVisualStyleBackColor = true;
             // 
+            // maskedTextBox_validity
+            // 
+            this.maskedTextBox_validity.Location = new System.Drawing.Point(397, 130);
+            this.maskedTextBox_validity.Name = "maskedTextBox_validity";
+            this.maskedTextBox_validity.Size = new System.Drawing.Size(121, 20);
+            this.maskedTextBox_validity.TabIndex = 27;
+            // 
             // FormCars
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 390);
+            this.Controls.Add(this.maskedTextBox_validity);
             this.Controls.Add(this.button_action);
             this.Controls.Add(this.label_masssymb);
             this.Controls.Add(this.label_hpsymb);
@@ -324,7 +354,6 @@
             this.Controls.Add(this.label_pricesymb);
             this.Controls.Add(this.numericUpDown_price);
             this.Controls.Add(this.label_price);
-            this.Controls.Add(this.dateTimePicker_validity);
             this.Controls.Add(this.label_validity);
             this.Controls.Add(this.numericUpDown_manDate);
             this.Controls.Add(this.label_ManDate);
@@ -362,7 +391,6 @@
         private System.Windows.Forms.Label label_ManDate;
         private System.Windows.Forms.NumericUpDown numericUpDown_manDate;
         private System.Windows.Forms.Label label_validity;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_validity;
         private System.Windows.Forms.Label label_price;
         private System.Windows.Forms.NumericUpDown numericUpDown_price;
         private System.Windows.Forms.Label label_pricesymb;
@@ -379,5 +407,6 @@
         private System.Windows.Forms.Label label_hpsymb;
         private System.Windows.Forms.Label label_masssymb;
         private System.Windows.Forms.Button button_action;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_validity;
     }
 }

@@ -70,21 +70,21 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -94,16 +94,16 @@
             this.listBox_Cars.FormattingEnabled = true;
             this.listBox_Cars.Location = new System.Drawing.Point(0, 48);
             this.listBox_Cars.Name = "listBox_Cars";
-            this.listBox_Cars.Size = new System.Drawing.Size(236, 335);
+            this.listBox_Cars.Size = new System.Drawing.Size(355, 335);
             this.listBox_Cars.TabIndex = 2;
             this.listBox_Cars.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // panel_Make
             // 
             this.panel_Make.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Make.Location = new System.Drawing.Point(233, 48);
+            this.panel_Make.Location = new System.Drawing.Point(361, 48);
             this.panel_Make.Name = "panel_Make";
-            this.panel_Make.Size = new System.Drawing.Size(274, 335);
+            this.panel_Make.Size = new System.Drawing.Size(146, 335);
             this.panel_Make.TabIndex = 3;
             this.panel_Make.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Make_Paint);
             // 

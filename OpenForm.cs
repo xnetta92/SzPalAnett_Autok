@@ -19,7 +19,7 @@ namespace SzPalAnett_Autok
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            int index = this.listBox_Cars.SelectedIndex; // < nem jo indexet ad vissza
         }
 
         private void panel_Make_Paint(object sender, PaintEventArgs e)
@@ -47,10 +47,11 @@ namespace SzPalAnett_Autok
             updateCars();
         }
 
-        private void updateCars()
+        public void updateCars()
         {
-            listBox_Cars.Items.Clear();
             
+            listBox_Cars.Items.Clear();
+
             List<string> chosen = new List<string>();
             foreach (CheckBox item in panel_Make.Controls)
             {
@@ -75,22 +76,22 @@ namespace SzPalAnett_Autok
         {
             if (listBox_Cars.SelectedIndex < 0)
             {
-                MessageBox.Show("Nincs kiválasztott elem!");
+                MessageBox.Show("You did not select any car in the list!");
                 return;
             }
-            FormCars formLaptop = new FormCars("edit");
-            formLaptop.ShowDialog();
+            FormCars formCars = new FormCars("edit");
+            formCars.ShowDialog();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (listBox_Cars.SelectedIndex < 0)
             {
-                MessageBox.Show("Nincs kiválasztott elem!");
+                MessageBox.Show("You did not select any car in the list!");
                 return;
             }
-            FormCars formLaptop = new FormCars("delete");
-            formLaptop.ShowDialog();
+            FormCars formCars = new FormCars("delete");
+            formCars.ShowDialog();
         }
     }
 }
